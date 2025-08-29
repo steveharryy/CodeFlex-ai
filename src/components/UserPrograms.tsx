@@ -1,3 +1,6 @@
+
+"use client";
+
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -173,13 +176,15 @@ const UserPrograms = () => {
               </CardContent>
 
               <CardFooter className="px-5 py-4 border-t border-border">
-                <Link href={`/programs/${program.id}`} className="w-full">
-                  <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90">
-                    View Program Details
-                    <ChevronRight className="ml-2 h-4 w-4" />
-                  </Button>
-                </Link>
-              </CardFooter>
+  <Button
+    onClick={() => window.location.href = "/"}
+    className="w-full bg-primary text-primary-foreground hover:bg-primary/90"
+  >
+    View Program Details
+    <ChevronRight className="ml-2 h-4 w-4" />
+  </Button>
+</CardFooter>
+
             </Card>
           ))}
         </div>
